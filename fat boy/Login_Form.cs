@@ -56,7 +56,13 @@ namespace fat_boy
 
             adapter.Fill(DataTable);
             if (DataTable.Rows.Count > 0)
+            {
+
+                this.Hide();
+                Scan_QR scan_QR = new Scan_QR();
+                scan_QR.Show();
                 MessageBox.Show("Yes");
+            }
             else
                 MessageBox.Show("No");
 
