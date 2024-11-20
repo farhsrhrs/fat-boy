@@ -46,11 +46,18 @@ namespace fat_boy
 
         private void Scan_QR_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(VideoCaptureDevice != null)
+            if (VideoCaptureDevice != null)
             {
                 if (VideoCaptureDevice.IsRunning)
                     VideoCaptureDevice.Stop();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Generator_QR generator_QR = new Generator_QR();
+            generator_QR.Show();
         }
     }
 
