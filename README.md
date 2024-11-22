@@ -9,3 +9,7 @@ v.0.0.2
 
 v.0.0.3
 ![fat_boy_7jMwObLw3p](https://github.com/user-attachments/assets/12b8954c-bd4d-4ff3-9334-671b3dfafaa9)
+
+v.0.0.4
+android version
+https://github.com/farhsrhrs/fat_boy_android/tree/master
