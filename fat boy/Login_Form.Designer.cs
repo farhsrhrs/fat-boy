@@ -49,7 +49,7 @@
             PasswordFielde.Size = new Size(278, 54);
             PasswordFielde.TabIndex = 6;
             PasswordFielde.UseSystemPasswordChar = true;
-            PasswordFielde.TextChanged += PasswordFielde_TextChanged;
+            
             // 
             // panel1
             // 

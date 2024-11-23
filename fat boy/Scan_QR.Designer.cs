@@ -35,6 +35,16 @@
             textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            IDdelivery = new Label();
+            Namething = new Label();
+            FROM = new Label();
+            TO = new Label();
+            Status = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -91,7 +101,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(594, 65);
+            button2.Location = new Point(713, 407);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 6;
@@ -99,11 +109,111 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(414, 56);
+            label3.Name = "label3";
+            label3.Size = new Size(18, 15);
+            label3.TabIndex = 7;
+            label3.Text = "ID";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(414, 80);
+            label4.Name = "label4";
+            label4.Size = new Size(37, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Thing";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(414, 104);
+            label5.Name = "label5";
+            label5.Size = new Size(35, 15);
+            label5.TabIndex = 9;
+            label5.Text = "From";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(414, 128);
+            label6.Name = "label6";
+            label6.Size = new Size(19, 15);
+            label6.TabIndex = 10;
+            label6.Text = "To";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(414, 152);
+            label7.Name = "label7";
+            label7.Size = new Size(39, 15);
+            label7.TabIndex = 11;
+            label7.Text = "Status";
+            // 
+            // IDdelivery
+            // 
+            IDdelivery.AutoSize = true;
+            IDdelivery.Location = new Point(463, 56);
+            IDdelivery.Name = "IDdelivery";
+            IDdelivery.Size = new Size(38, 15);
+            IDdelivery.TabIndex = 12;
+            IDdelivery.Text = "label8";
+            // 
+            // Namething
+            // 
+            Namething.AutoSize = true;
+            Namething.Location = new Point(463, 80);
+            Namething.Name = "Namething";
+            Namething.Size = new Size(38, 15);
+            Namething.TabIndex = 13;
+            Namething.Text = "label8";
+            // 
+            // FROM
+            // 
+            FROM.AutoSize = true;
+            FROM.Location = new Point(463, 105);
+            FROM.Name = "FROM";
+            FROM.Size = new Size(38, 15);
+            FROM.TabIndex = 14;
+            FROM.Text = "label8";
+            // 
+            // TO
+            // 
+            TO.AutoSize = true;
+            TO.Location = new Point(463, 128);
+            TO.Name = "TO";
+            TO.Size = new Size(38, 15);
+            TO.TabIndex = 15;
+            TO.Text = "label8";
+            // 
+            // Status
+            // 
+            Status.AutoSize = true;
+            Status.Location = new Point(468, 152);
+            Status.Name = "Status";
+            Status.Size = new Size(38, 15);
+            Status.TabIndex = 16;
+            Status.Text = "label8";
+            // 
             // Scan_QR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Status);
+            Controls.Add(TO);
+            Controls.Add(FROM);
+            Controls.Add(Namething);
+            Controls.Add(IDdelivery);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -129,5 +239,15 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label IDdelivery;
+        private Label Namething;
+        private Label FROM;
+        private Label TO;
+        private Label Status;
     }
 }

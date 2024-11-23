@@ -9,20 +9,42 @@ namespace fat_boy
 {
     internal class DataBase
     {
-        MySqlConnection connection = new MySqlConnection("server=localhost;username=root;password=root;database=warehouse");
+        static string DBConnect = "server=localhost;username=root;password=root;database=warehouse";
+        static public MySqlDataAdapter msDataAdapter;
+        static MySqlConnection myconnection;
+        static public MySqlCommand msCommand;
 
-        public void OpenConnction()
+        public static bool ConnectionDB()
         {
-            if(connection.State == System.Data.ConnectionState.Closed)
-                connection.Open();
+            try
+            {
+                myconnection = new MySqlConnection(DBConnect);
+                myconnection.Open();
+                msCommand = new MySqlCommand();
+                msCommand.Connection = myconnection;
+                msDataAdapter = new MySqlDataAdapter();
+                return true;
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
+                return false;
+            }
+            
         }
-        public void CloseConnction()
+
+
+
+        //MySqlConnection connection = new MySqlConnection("server=localhost;username=root;password=root;database=warehouse");
+
+
+        public void CloseDB()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
-                connection.Close();
+            myconnection.Close();
         }
         public MySqlConnection GetConnection() { 
-            return connection;
+            return myconnection;
         }
     }
 }

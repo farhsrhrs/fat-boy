@@ -14,6 +14,10 @@ namespace fat_boy
 {
     public partial class Login_Form : Form
     {
+        static public string Role, User;
+
+
+
         public Login_Form()
         {
             InitializeComponent();
@@ -40,8 +44,37 @@ namespace fat_boy
 
         }
 
+
+
+        static public void GetInfo(string login, string password)
+        {
+            try
+            {
+                DataBase.msCommand.CommandText = "SELECT * FROM `users` WHERE `login` = '" + login + "' AND `pass` = '" + password + "'";
+                Object result = DataBase.msCommand.ExecuteScalar();
+                if (result != null)
+                {
+                    Role = result.ToString();
+                    User = login;
+                }
+                else
+                {
+                    Role = null;
+                }
+            }
+            catch
+            {
+                Role = null;
+                MessageBox.Show("Ошибка данных");
+            }
+
+
+        }
+
+
         private void Sing_In_Click(object sender, EventArgs e)
         {
+            DataBase.ConnectionDB();
             string _login_user = LoginFielde.Text;
             string _password_user = PasswordFielde.Text;
 
@@ -63,14 +96,14 @@ namespace fat_boy
                 scan_QR.Show();
                 MessageBox.Show("Yes");
             }
-            else
+            else {
                 MessageBox.Show("No");
+            }
 
-        }
+            //private void PasswordFielde_TextChanged(object sender, EventArgs e)
+            {
 
-        private void PasswordFielde_TextChanged(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }
