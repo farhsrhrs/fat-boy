@@ -82,11 +82,11 @@ namespace fat_boy
                 Object idform_rs = DataBase.msCommand.ExecuteScalar();
                 FROM.Text = idform_rs.ToString();
 
-                DataBase.msCommand.CommandText = "SELECT `place` FROM `delivery`,`place` WHERE `iddelivery` = '" + iddelivery + "'" + "AND delivery.idto=place.idplace";//form from ошибка в БД
+                DataBase.msCommand.CommandText = "SELECT `place` FROM `delivery`,`place` WHERE `iddelivery` = '" + iddelivery + "'" + "AND delivery.idto=place.idplace";
                 Object idto_rs = DataBase.msCommand.ExecuteScalar();
                 TO.Text = idto_rs.ToString();
 
-                DataBase.msCommand.CommandText = "SELECT `name` FROM `delivery`,`status` WHERE `iddelivery` = '" + iddelivery + "'" + "AND delivery.status=status.idstatus";//form from ошибка в БД
+                DataBase.msCommand.CommandText = "SELECT `name` FROM `delivery`,`status` WHERE `iddelivery` = '" + iddelivery + "'" + "AND delivery.status=status.idstatus";
                 Object status_rs = DataBase.msCommand.ExecuteScalar();
                 Status.Text = status_rs.ToString();
 
