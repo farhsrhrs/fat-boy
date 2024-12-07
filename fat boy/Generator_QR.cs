@@ -90,13 +90,21 @@ namespace fat_boy
                 MessageBox.Show("Ошибка с внесение данных");
             }
         }
-        public void InsertData(int iddelivery, string idform, string idto, string status, string idthing)
+        public void InsertData(int iddelivery, string idform, string idto, string status, string idthing,string description)
         {
 
             string hg;
-            hg = "INSERT INTO `delivery` (iddelivery, idform, idto, status, idthing) VALUES ('" + iddelivery + "', '" + idform + "', '" + idto + "', '" + status + "','" + idthing + "'  )";
+            if (iddelivery != 0  && idform !="0" && idto != "0" && status != "0" && idthing != "0") { 
+            hg = "INSERT INTO `delivery` (iddelivery, idform, idto, status, idthing,description) VALUES ('" + iddelivery + "', '" + idform + "', '" + idto + "', '" + status + "','" + idthing + "','" + description + "')";
             DataBase.msCommand.CommandText = hg;
             Object idform_rs = DataBase.msCommand.ExecuteScalar();
+            MessageBox.Show("Товар успешно внесён");
+            }
+            else
+            {
+                MessageBox.Show("Не все данные указаны");
+            }
+            
         }
 
         public string NameToId(string selectInfo, string table, string idattribute, string name)
@@ -105,23 +113,31 @@ namespace fat_boy
             hg = "SELECT `" + selectInfo + "` FROM `" + table + "` WHERE `" + idattribute + "` = '" + name + "'";
             DataBase.msCommand.CommandText = hg; //form from ошибка в БД place place idplace
             Object idform_rs = DataBase.msCommand.ExecuteScalar();
-            return idform_rs.ToString();
+            if (idform_rs != null) {
+                return idform_rs.ToString();
+            }
+            else
+            {
+                return "0";
+            }
+            
         }
 
         private void GeneratorButton_Click(object sender, EventArgs e)
         {
-            string From, To, Thing, Status;
+            string From, To, Thing, Status , Description;
             string idFrom, idTo, idThing, idStatus;
             int IdDelivery = LastID() + 1;
             From = comboBox1.Text;
             To = comboBox2.Text;
             Thing = comboBox3.Text;
             Status = comboBox4.Text;
+            Description =richTextBox1.Text;
             idFrom = NameToId("idplace", "place", "place", From);
             idTo = NameToId("idplace", "place", "place", To);
             idThing = NameToId("idthing", "thing", "name", Thing);
             idStatus = NameToId("idstatus", "status", "name", Status);
-            InsertData(IdDelivery, idFrom, idTo, idThing, idStatus);
+            InsertData(IdDelivery, idFrom, idTo, idThing, idStatus , Description);
 
 
             BarcodeWriter writer = new BarcodeWriter();

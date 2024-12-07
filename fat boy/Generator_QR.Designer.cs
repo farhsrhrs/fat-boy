@@ -40,6 +40,8 @@
             label4 = new Label();
             comboBox4 = new ComboBox();
             button1 = new Button();
+            label5 = new Label();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -53,14 +55,14 @@
             // 
             // QRInput
             // 
-            QRInput.Location = new Point(12, 329);
+            QRInput.Location = new Point(12, 373);
             QRInput.Name = "QRInput";
             QRInput.Size = new Size(300, 23);
             QRInput.TabIndex = 1;
             // 
             // GeneratorButton
             // 
-            GeneratorButton.Location = new Point(337, 329);
+            GeneratorButton.Location = new Point(337, 373);
             GeneratorButton.Name = "GeneratorButton";
             GeneratorButton.Size = new Size(75, 23);
             GeneratorButton.TabIndex = 2;
@@ -140,17 +142,36 @@
             // 
             button1.Location = new Point(12, 415);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(133, 23);
             button1.TabIndex = 12;
-            button1.Text = "button1";
+            button1.Text = "Сканировать QRcode";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(337, 149);
+            label5.Name = "label5";
+            label5.Size = new Size(67, 15);
+            label5.TabIndex = 13;
+            label5.Text = "Description";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(411, 149);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(345, 128);
+            richTextBox1.TabIndex = 14;
+            richTextBox1.Text = "";
             // 
             // Generator_QR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(richTextBox1);
+            Controls.Add(label5);
             Controls.Add(button1);
             Controls.Add(comboBox4);
             Controls.Add(label4);
@@ -184,5 +205,7 @@
         private Label label4;
         private ComboBox comboBox4;
         private Button button1;
+        private Label label5;
+        private RichTextBox richTextBox1;
     }
 }

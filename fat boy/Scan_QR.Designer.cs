@@ -45,6 +45,13 @@
             FROM = new Label();
             TO = new Label();
             Status = new Label();
+            button3 = new Button();
+            comboBox2 = new ComboBox();
+            label8 = new Label();
+            label9 = new Label();
+            description = new Label();
+            label10 = new Label();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,11 +66,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(56, 16);
+            label1.Location = new Point(39, 16);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(90, 15);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "Выбор камеры";
             // 
             // pictureBox1
             // 
@@ -93,19 +100,19 @@
             // 
             button1.Location = new Point(405, 407);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(115, 23);
             button1.TabIndex = 5;
-            button1.Text = "button1";
+            button1.Text = "Включить камеру";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(713, 407);
+            button2.Location = new Point(685, 407);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(103, 23);
             button2.TabIndex = 6;
-            button2.Text = "button2";
+            button2.Text = "Создать QRcode";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -193,17 +200,86 @@
             // Status
             // 
             Status.AutoSize = true;
-            Status.Location = new Point(468, 152);
+            Status.Location = new Point(463, 152);
             Status.Name = "Status";
             Status.Size = new Size(38, 15);
             Status.TabIndex = 16;
             Status.Text = "label8";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(414, 250);
+            button3.Name = "button3";
+            button3.Size = new Size(115, 23);
+            button3.TabIndex = 17;
+            button3.Text = "Изменить данные";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(487, 279);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(179, 23);
+            comboBox2.TabIndex = 18;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(414, 282);
+            label8.Name = "label8";
+            label8.Size = new Size(39, 15);
+            label8.TabIndex = 19;
+            label8.Text = "Status";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(414, 176);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 15);
+            label9.TabIndex = 20;
+            label9.Text = "Description";
+            // 
+            // description
+            // 
+            description.AutoSize = true;
+            description.Location = new Point(487, 176);
+            description.Name = "description";
+            description.Size = new Size(38, 15);
+            description.TabIndex = 21;
+            description.Text = "label8";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(414, 311);
+            label10.Name = "label10";
+            label10.Size = new Size(67, 15);
+            label10.TabIndex = 22;
+            label10.Text = "Description";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(487, 311);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(301, 74);
+            richTextBox1.TabIndex = 23;
+            richTextBox1.Text = "";
             // 
             // Scan_QR
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(richTextBox1);
+            Controls.Add(label10);
+            Controls.Add(description);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(comboBox2);
+            Controls.Add(button3);
             Controls.Add(Status);
             Controls.Add(TO);
             Controls.Add(FROM);
@@ -249,5 +325,12 @@
         private Label FROM;
         private Label TO;
         private Label Status;
+        private Button button3;
+        private ComboBox comboBox2;
+        private Label label8;
+        private Label label9;
+        private Label description;
+        private Label label10;
+        private RichTextBox richTextBox1;
     }
 }
