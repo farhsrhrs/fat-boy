@@ -16,3 +16,5 @@ https://github.com/farhsrhrs/fat_boy_android/tree/master
 
 v.0.0.5
 ![image](https://github.com/user-attachments/assets/b0a7f33b-6ce3-4e47-960b-8649a58cfa39)
+v.0.0.6
+![image](https://github.com/user-attachments/assets/c41587f3-4a58-45cc-8b83-94f3bd1b0bda)
